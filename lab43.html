@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notice - Khwopa Online Form</title>
+</head>
+<body>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		.container{
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 50%;
+			
+			padding: 20px; margin: 50px 300px;
+		}
+		.create{
+			border-radius: 5px;
+			border: 1px solid #fff;
+			width: 50%;
+			
+			padding: 20px; margin: 10px 100px;
+
+		}
+		
+		input[type=text]
+		{
+			width: 75%; padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 6px;
+
+			
+			resize: vertical;
+		}
+		input[type=submit]
+		{
+			background-color: blue;
+			color: white; padding: 12px 20px;
+
+
+			border-color: blue;
+			border-radius: 4px; cursor: pointer;
+		}
+	
+		
+	</style>
+	<form action="/register.php" method="POST">
+		<div class="container">
+			<h1>Create Notice</h1>
+			<p>Fields with <span style="color: red">*</span> are required</p>
+			
+			Title <span style="color: red">*</span> <input type="text" name="titl" required><br>
+			Summary <span style="color: red">*</span> <input type="text" name="summ" required><br>
+			Description <textarea rows="2" cols="40" ></textarea><br><br>
+			Department <select>
+				<option value="none">---</option>
+				<option value="Computer">Computer</option>
+				<option value="Civil">Civil</option>
+				<option value="Electronics">Electronics</option>
+			</select>
+
+				 <br><br>
+			Image <input type="file" name="img" value="choose file" required><br><br>
+			<div class="create">
+			 <input type="submit" value="Create"/>
+		</div>
+					
+		</div>
+		
+
+	</form>
+
+</body>
+</html>
